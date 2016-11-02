@@ -16,5 +16,10 @@ namespace COMP1004_F2016_Assignment3
         {
             InitializeComponent();
         }
+
+        private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
