@@ -127,6 +127,7 @@ namespace COMP1004_F2016_Assignment3
             CategoryTextBox.Text = "Action";
             CostTextBox.Text = "2.99";
             NextButton.Enabled = true;
+
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -134,6 +135,7 @@ namespace COMP1004_F2016_Assignment3
             Program.movie.MovieTitle = TitleTextBox.Text;
             Program.movie.Category = CategoryTextBox.Text;
             Program.movie.Cost = CostTextBox.Text;
+            Program.movie.MoviePoster = MoviePictureBox.Image;
 
             this.Hide();
             OrderForm orderForm = new OrderForm();

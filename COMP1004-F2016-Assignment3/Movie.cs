@@ -12,5 +12,7 @@ namespace COMP1004_F2016_Assignment3
 
         public string Category { get; set; }
         public string Cost { get; set; }
+        
+        public System.Drawing.Image MoviePoster { get; set; }
     }
 }
