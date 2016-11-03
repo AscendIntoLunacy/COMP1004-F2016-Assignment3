@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace COMP1004_F2016_Assignment3
 {
-    static class Program
+    public static class Program
     {
+        public static Movie movie = new Movie();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,7 @@ namespace COMP1004_F2016_Assignment3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectForm());
+            Application.Run(new SplashForm());
         }
     }
 }

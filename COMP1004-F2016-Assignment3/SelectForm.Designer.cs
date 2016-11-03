@@ -32,16 +32,16 @@
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.MovieListBox = new System.Windows.Forms.ListBox();
             this.SelectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.CategoryLabel = new System.Windows.Forms.Label();
-            this.CostLabel = new System.Windows.Forms.Label();
-            this.TitleTextBox = new System.Windows.Forms.TextBox();
-            this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.CategoryLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.SelectionGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectMovieLabel
@@ -74,13 +74,13 @@
             "Barbie In The Nutcracker",
             "Captain America",
             "Jurassic Park",
+            "Me Before You",
             "Mothers Day",
             "Saving Private Ryan",
             "Shrek",
             "Shrek 2",
             "The Avengers",
-            "Titanic",
-            "You Before Me"});
+            "Titanic"});
             this.MovieListBox.Location = new System.Drawing.Point(38, 182);
             this.MovieListBox.Name = "MovieListBox";
             this.MovieListBox.Size = new System.Drawing.Size(325, 500);
@@ -96,7 +96,7 @@
             this.SelectionGroupBox.Controls.Add(this.CostLabel);
             this.SelectionGroupBox.Controls.Add(this.CategoryLabel);
             this.SelectionGroupBox.Controls.Add(this.TitleLabel);
-            this.SelectionGroupBox.Controls.Add(this.pictureBox1);
+            this.SelectionGroupBox.Controls.Add(this.MoviePictureBox);
             this.SelectionGroupBox.Location = new System.Drawing.Point(396, 182);
             this.SelectionGroupBox.Name = "SelectionGroupBox";
             this.SelectionGroupBox.Size = new System.Drawing.Size(838, 442);
@@ -104,33 +104,29 @@
             this.SelectionGroupBox.TabStop = false;
             this.SelectionGroupBox.Text = "Your Selection";
             // 
-            // pictureBox1
+            // CostTextBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(23, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 348);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.CostTextBox.Location = new System.Drawing.Point(585, 317);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
+            this.CostTextBox.Size = new System.Drawing.Size(213, 38);
+            this.CostTextBox.TabIndex = 6;
             // 
-            // TitleLabel
+            // CategoryTextBox
             // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Arimo", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(297, 80);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(71, 35);
-            this.TitleLabel.TabIndex = 1;
-            this.TitleLabel.Text = "Title";
+            this.CategoryTextBox.Location = new System.Drawing.Point(303, 317);
+            this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.ReadOnly = true;
+            this.CategoryTextBox.Size = new System.Drawing.Size(192, 38);
+            this.CategoryTextBox.TabIndex = 5;
             // 
-            // CategoryLabel
+            // TitleTextBox
             // 
-            this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Font = new System.Drawing.Font("Arimo", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryLabel.Location = new System.Drawing.Point(297, 264);
-            this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(135, 35);
-            this.CategoryLabel.TabIndex = 2;
-            this.CategoryLabel.Text = "Category";
+            this.TitleTextBox.Location = new System.Drawing.Point(303, 133);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
+            this.TitleTextBox.Size = new System.Drawing.Size(479, 38);
+            this.TitleTextBox.TabIndex = 4;
             // 
             // CostLabel
             // 
@@ -142,29 +138,25 @@
             this.CostLabel.TabIndex = 3;
             this.CostLabel.Text = "Cost";
             // 
-            // TitleTextBox
+            // CategoryLabel
             // 
-            this.TitleTextBox.Location = new System.Drawing.Point(303, 133);
-            this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.ReadOnly = true;
-            this.TitleTextBox.Size = new System.Drawing.Size(479, 38);
-            this.TitleTextBox.TabIndex = 4;
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Font = new System.Drawing.Font("Arimo", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Location = new System.Drawing.Point(297, 264);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(135, 35);
+            this.CategoryLabel.TabIndex = 2;
+            this.CategoryLabel.Text = "Category";
             // 
-            // CategoryTextBox
+            // TitleLabel
             // 
-            this.CategoryTextBox.Location = new System.Drawing.Point(303, 317);
-            this.CategoryTextBox.Name = "CategoryTextBox";
-            this.CategoryTextBox.ReadOnly = true;
-            this.CategoryTextBox.Size = new System.Drawing.Size(192, 38);
-            this.CategoryTextBox.TabIndex = 5;
-            // 
-            // CostTextBox
-            // 
-            this.CostTextBox.Location = new System.Drawing.Point(585, 317);
-            this.CostTextBox.Name = "CostTextBox";
-            this.CostTextBox.ReadOnly = true;
-            this.CostTextBox.Size = new System.Drawing.Size(213, 38);
-            this.CostTextBox.TabIndex = 6;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Arimo", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(297, 80);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(71, 35);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Title";
             // 
             // NextButton
             // 
@@ -175,6 +167,16 @@
             this.NextButton.TabIndex = 7;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.Location = new System.Drawing.Point(23, 80);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(237, 348);
+            this.MoviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MoviePictureBox.TabIndex = 0;
+            this.MoviePictureBox.TabStop = false;
             // 
             // SelectForm
             // 
@@ -194,7 +196,7 @@
             this.Text = "Movie Bonanza";
             this.SelectionGroupBox.ResumeLayout(false);
             this.SelectionGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +214,7 @@
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label CategoryLabel;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox MoviePictureBox;
         private System.Windows.Forms.Button NextButton;
     }
 }

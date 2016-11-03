@@ -27,7 +27,10 @@ namespace COMP1004_F2016_Assignment3
 
         private void SplashFormTimer_Tick(object sender, EventArgs e)
         {
-
+            SplashFormTimer.Enabled = false;
+            SelectForm selectForm = new SelectForm();
+            selectForm.Show();
+            this.Hide();
         }
     }
 }

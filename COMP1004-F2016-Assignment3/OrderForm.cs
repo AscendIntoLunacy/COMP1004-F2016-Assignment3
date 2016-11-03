@@ -12,6 +12,8 @@ namespace COMP1004_F2016_Assignment3
 {
     public partial class OrderForm : Form
     {
+        public SelectForm previousSelectForm { get; set; }
+
         public OrderForm()
         {
             InitializeComponent();

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Movie.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
@@ -105,6 +107,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Age of Ultron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barbie In The Nutcracker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captain America.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jurassic Park.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Me Before You.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mothers Day.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saving Private Ryan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shrek 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Avengers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgeofUltron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarbieInTheNutcracker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaptainAmerica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JurassicPark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MeBeforeYou.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MothersDay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SavingPrivateRyan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shrek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shrek2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheAvengers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titanic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MovieBonanzaLogo.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
