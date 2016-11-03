@@ -14,5 +14,7 @@ namespace COMP1004_F2016_Assignment3
         public string Cost { get; set; }
         
         public System.Drawing.Image MoviePoster { get; set; }
+
+        public string TotalCost { get; set; }
     }
 }

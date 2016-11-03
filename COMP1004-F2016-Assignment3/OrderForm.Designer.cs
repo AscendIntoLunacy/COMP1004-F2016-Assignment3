@@ -36,7 +36,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SelectedGroupBox = new System.Windows.Forms.GroupBox();
-            this.SelectedMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
@@ -57,10 +56,11 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.StreamButton = new System.Windows.Forms.Button();
+            this.SelectedMoviePictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.SelectedGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedMoviePictureBox)).BeginInit();
             this.OrderGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedMoviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -88,14 +88,16 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.streamToolStripMenuItem.Text = "Stream";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.streamToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
@@ -115,7 +117,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -132,14 +134,6 @@
             this.SelectedGroupBox.TabIndex = 1;
             this.SelectedGroupBox.TabStop = false;
             this.SelectedGroupBox.Text = "Selected Movie";
-            // 
-            // SelectedMoviePictureBox
-            // 
-            this.SelectedMoviePictureBox.Location = new System.Drawing.Point(38, 249);
-            this.SelectedMoviePictureBox.Name = "SelectedMoviePictureBox";
-            this.SelectedMoviePictureBox.Size = new System.Drawing.Size(431, 565);
-            this.SelectedMoviePictureBox.TabIndex = 4;
-            this.SelectedMoviePictureBox.TabStop = false;
             // 
             // CategoryTextBox
             // 
@@ -316,6 +310,7 @@
             this.BackButton.TabIndex = 6;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CancelButton
             // 
@@ -335,6 +330,15 @@
             this.StreamButton.TabIndex = 8;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
+            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
+            // 
+            // SelectedMoviePictureBox
+            // 
+            this.SelectedMoviePictureBox.Location = new System.Drawing.Point(38, 249);
+            this.SelectedMoviePictureBox.Name = "SelectedMoviePictureBox";
+            this.SelectedMoviePictureBox.Size = new System.Drawing.Size(431, 565);
+            this.SelectedMoviePictureBox.TabIndex = 4;
+            this.SelectedMoviePictureBox.TabStop = false;
             // 
             // OrderForm
             // 
@@ -352,15 +356,16 @@
             this.MinimizeBox = false;
             this.Name = "OrderForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.SelectedGroupBox.ResumeLayout(false);
             this.SelectedGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SelectedMoviePictureBox)).EndInit();
             this.OrderGroupBox.ResumeLayout(false);
             this.OrderGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SelectedMoviePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

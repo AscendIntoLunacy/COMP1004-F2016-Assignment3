@@ -28,12 +28,7 @@ namespace COMP1004_F2016_Assignment3
             CostTextBox.Text = Program.movie.Cost.ToString();
             SubtotalTextBox.Text = Program.movie.Cost.ToString();
 
-            double _subtotal;
-
-            _subtotal = Convert.ToDouble(SubtotalTextBox.Text) * 1.13;
-
-            GrandTotalTextBox.Text = _subtotal.ToString("#.##");
-
+            TotalCost();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -46,10 +41,7 @@ namespace COMP1004_F2016_Assignment3
             ExitProgram();
         }
 
-        private static void ExitProgram()
-        {
-            Application.Exit();
-        }
+
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -76,6 +68,8 @@ namespace COMP1004_F2016_Assignment3
                     _grandTotal = Convert.ToDouble(SubtotalTextBox.Text) * 1.13;
 
                     GrandTotalTextBox.Text = _grandTotal.ToString("#.##");
+
+                    Program.movie.TotalCost = GrandTotalTextBox.Text;
                 }
                 catch(Exception exception)
                 {
@@ -90,14 +84,53 @@ namespace COMP1004_F2016_Assignment3
                 DVDCostTextBox.Visible = false;
                 SubtotalTextBox.Text = Program.movie.Cost;
 
-                double _subtotal;
-
-                _subtotal = Convert.ToDouble(SubtotalTextBox.Text) * 1.13;
-
-                GrandTotalTextBox.Text = _subtotal.ToString("#.##");
+                TotalCost();
             }
         }
 
+        
 
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Here is your order!", "Print Preview", MessageBoxButtons.OKCancel);
+        }
+
+        private void StreamButton_Click(object sender, EventArgs e)
+        {
+            ShowStream();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.previousSelectForm.Show();
+            this.Close();
+        }
+
+        private void streamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowStream();
+        }
+
+        private static void ExitProgram()
+        {
+            Application.Exit();
+        }
+
+        private void ShowStream()
+        {
+            this.Hide();
+            StreamForm streamForm = new StreamForm();
+            streamForm.previousOrderForm = this;
+            streamForm.Show();
+        }
+
+        private void TotalCost()
+        {
+            double _subtotal = Convert.ToDouble(SubtotalTextBox.Text) * 1.13;
+
+            GrandTotalTextBox.Text = _subtotal.ToString("#.##");
+
+            Program.movie.TotalCost = GrandTotalTextBox.Text;
+        }
     }
 }
