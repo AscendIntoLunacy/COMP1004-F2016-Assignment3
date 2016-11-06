@@ -25,6 +25,7 @@ namespace COMP1004_F2016_Assignment3
             InitializeComponent();
         }
 
+        // Turns the Timer off after 3 seconds, starts a new Select Form then hides the splash screen
         private void SplashFormTimer_Tick(object sender, EventArgs e)
         {
             SplashFormTimer.Enabled = false;
